@@ -2,14 +2,20 @@
   "name": "webpack-config",
   "private": true,
   "scripts": {
-    "build": "webpack",
-    "start": "webpack --watch"
+    "start": "set NODE_ENV=development&&webpack-dev-server --env development",
+    "build": "set NODE_ENV=production&&webpack --env production"
   },
   "devDependencies": {
     "autoprefixer": "latest",
+    "babel-core": "^6.25.0",
+    "babel-loader": "^7.1.1",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "copy-webpack-plugin": "^4.0.1",
     "css-loader": "latest",
     "css-mqpacker": "latest",
-    "extract-text-webpack-plugin": "latest",
+    "extract-text-webpack-plugin": "^2.0.0",
+    "favicons-webpack-plugin": "latest",
     "file-loader": "latest",
     "glob-all": "latest",
     "html-webpack-plugin": "latest",
@@ -23,16 +29,25 @@
     "postcss-line-height-px-to-unitless": "latest",
     "postcss-loader": "latest",
     "postcss-object-fit-images": "latest",
-    "postcss-rgb-plz": "latest",
     "purify-css": "latest",
     "purifycss-webpack": "latest",
     "sass-loader": "latest",
     "style-loader": "latest",
-    "webpack": "latest"
+    "stylefmt": "latest",
+    "stylefmt-loader": "latest",
+    "stylelint": "latest",
+    "stylelint-config-standard": "latest",
+    "uglifyjs-webpack-plugin": "^0.4.6",
+    "webpack": "^2.2.0",
+    "webpack-dev-server": "^2.2.0",
+    "webpack-merge": "latest"
   },
   "browserslist": [
     "last 10 versions",
     ">5%",
     "IE 10"
-  ]
+  ],
+  "dependencies": {
+    "jquery": "^2.2.4"
+  }
 }

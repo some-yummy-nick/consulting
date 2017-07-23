@@ -3,10 +3,50 @@
 <head>
   <meta charset="UTF-8">
   <title>Title</title>
+  <style>
+    @font-face {
+      font-family: Oswald;
+      src: url(./fonts/Oswald.woff2) format("woff2"),
+      url(./fonts/Oswald.woff) format("woff"),
+      url(./fonts/Oswald.ttf) format("truetype");
+    }
+  </style>
+  <script src="libraries/fontfaceobserver.js"></script>
+  <script>
+    !function (n) {
+    function e(o) {
+      if (t[o]) return t[o].exports;
+      var r = t[o] = {i: o, l: !1, exports: {}};
+      return n[o].call(r.exports, r, r.exports, e), r.l = !0, r.exports
+    }
+
+    var t = {};
+    e.m = n, e.c = t, e.i = function (n) {
+      return n
+    }, e.d = function (n, t, o) {
+      e.o(n, t) || Object.defineProperty(n, t, {configurable: !1, enumerable: !0, get: o})
+    }, e.n = function (n) {
+      var t = n && n.__esModule ? function () {
+        return n.default
+      } : function () {
+        return n
+      };
+      return e.d(t, "a", t), t
+    }, e.o = function (n, e) {
+      return Object.prototype.hasOwnProperty.call(n, e)
+    }, e.p = "", e(e.s = 2)
+  }([function (n, e) {
+  }, , function (n, e, t) {
+    "use strict";
+    t(0), new FontFaceObserver("Oswald").load().then(function () {
+      console.log("font loaded"), document.documentElement.className += " fonts-loaded"
+    })
+  }]);</script>
 </head>
 <body>
-<header></header>
 <p>hello</p>
 <img src="<%= require('../images/logo.png') %>" alt="Логотип">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/jquery.js"><\/script>')</script>
 </body>
 </html>
