@@ -87,7 +87,7 @@ const common = {
     new ExtractTextPlugin("style.css"),
     new PurifyCSSPlugin({
       paths: glob.sync([
-        path.join(__dirname, './source/js/script.js'),
+        path.join(__dirname, './source/js/*.js'),
         path.join(__dirname, './source/html/index.html')
       ]),
       minimize:env === 'production'

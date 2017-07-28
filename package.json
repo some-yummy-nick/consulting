@@ -23,6 +23,7 @@
     "extract-text-webpack-plugin": "^2.0.0",
     "favicons-webpack-plugin": "latest",
     "file-loader": "latest",
+    "fontawesome-scss": "^2.0.4",
     "gh-pages": "latest",
     "glob-all": "latest",
     "html-webpack-plugin": "latest",

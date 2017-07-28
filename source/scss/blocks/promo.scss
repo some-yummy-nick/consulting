@@ -1,0 +1,99 @@
+.promo {
+  position: relative;
+  height: 670px;
+  padding-top: 130px;
+  background-image: url('../images/promo-bg.jpg');
+  background-position: center;
+  color: #fff;
+  text-align: center;
+  &__title {
+    position: relative;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 51px;
+    span {
+      color: $accent-color;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      top: -100px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: block;
+      width: 55px;
+      height: 55px;
+      background-image: url('../images/promo-icon.png');
+    }
+  }
+  &__text {
+    font-size: 27px;
+    font-weight: 300;
+    line-height: 40px;
+  }
+  &__btn {
+    @include inlineBlock();
+    width: 130px;
+    height: 53px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    line-height: 53px;
+    border: 2px solid $accent-color;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+    &:hover {
+      background-color: $accent-color;
+      text-decoration: none;
+    }
+    &--last{
+      margin-right: 0;
+    }
+
+  }
+  &__click{
+    display: none;
+  }
+@media(min-width: 338px) {
+  padding-top: 200px;
+}
+  @media(min-width: 408px) {
+    padding-top: 200px;
+    &__title{
+      font-size: 46px;
+    }
+  }
+  @media($tablet-widths) {
+    padding-top: 225px;
+     &__title{
+       font-size: 57px;
+     }
+    &__btn{
+      margin-bottom: 0;
+    }
+    &__click {
+      display: block;
+      position: absolute;
+      bottom: 60px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: block;
+      width: 20px;
+      height: 30px;
+      background-image: url('../images/promo-mouse.png');
+      cursor: pointer;
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: -40px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: block;
+        width: 11px;
+        height: 24px;
+        background-image: url('../images/promo-arrow.png');
+      }
+    }
+  }
+}

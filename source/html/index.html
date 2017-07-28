@@ -7,13 +7,19 @@
   <meta name="viewport"
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <title>Webpack</title>
-  <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
   <style>
     @font-face {
-      font-family: Oswald;
-      src: url(./fonts/Oswald.woff2) format("woff2"),
-      url(./fonts/Oswald.woff) format("woff"),
-      url(./fonts/Oswald.ttf) format("truetype");
+      font-family: ProximaNova;
+      src: url(./fonts/ProximaNovaRegular.woff) format("woff"),
+      url(./fonts/ProximaNovaRegular.ttf) format("truetype");
+      font-weight: 400;
+    }
+
+    @font-face {
+      font-family: ProximaNova;
+      src: url(./fonts/ProximaNovaBold.woff) format("woff"),
+      url(./fonts/ProximaNovaBold.ttf) format("truetype");
+      font-weight: 700;
     }
   </style>
   <script src="libraries/fontfaceobserver.js"></script>
@@ -43,7 +49,7 @@
     }([function (n, e) {
     }, , function (n, e, t) {
       "use strict";
-      t(0), new FontFaceObserver("Oswald").load().then(function () {
+      t(0), new FontFaceObserver("ProximaNova").load().then(function () {
         console.log("font loaded"), document.documentElement.className += " fonts-loaded"
       })
     }]);</script>
@@ -74,7 +80,67 @@
 });</script>
 <div class="wrapper">
   <div class="content">
-    <header class="header">header</header>
+    <header class="header">
+      <div class="container">
+        <div class="header__logo">
+          <a href=""><img src="<%= require('../images/logo.png') %>" alt="Логотип"/></a>
+        </div>
+        <button class="header__menu-icon"><span></span></button>
+        <div class="header__menu  js-hided">
+          <a class="header__menu-phone" href="tel:+74959680611">+7 (495) 968-0611 <span>Контактный телефон</span></a>
+          <ul class="header__list">
+            <li class="header__item">
+              <a class="header__link" href="">о Компании</a>
+            </li>
+            <li class="header__item  header__item--products">
+              <a class="header__link" href="">Продукты</a>
+            </li>
+            <li class="header__item  header__item--services">
+              <a class="header__link" href="">Услуги</a>
+            </li>
+            <li class="header__item">
+              <a class="header__link" href="">Клиенты</a>
+            </li>
+            <li class="header__item">
+              <a class="header__link" href="">Новости</a>
+            </li>
+            <li class="header__item">
+              <a class="header__link" href="">Контакты</a>
+            </li>
+          </ul>
+        </div>
+        <div class="header__contact-icon"></div>
+        <div class="header__contact">
+          <a href="tel:+74959680611">+7 (495) 968-0611</a>
+          <a href="" class="btn">Заказать звонок</a>
+        </div>
+      </div>
+      <div class="header__popup js-hided">
+        <h2>Заказать <br> обратный звонок</h2>
+        <form class="header__form">
+          <div class="header__form-block">
+            <label for="name">Как вас зовут</label>
+            <input id="name" type="text">
+          </div>
+          <div class="header__form-block">
+            <label for="phone">Введите ваш телефон</label>
+            <input id="phone" type="text">
+          </div>
+          <button type="submit">Я жду звонка</button>
+        </form>
+      </div>
+    </header>
+    <section class="promo">
+      <div class="container">
+      <h1 class="promo__title"><span>Автоматизация</span> вашего бизнеса</h1>
+      <p class="promo__text">Услуги разработки и внедрения информационных
+        систем и web-порталов</p>
+      <a href="" class="promo__btn">О нас</a>
+      <a href="" class="promo__btn promo__btn--last">Наши услуги</a>
+      <div class="promo__click"></div>
+      </div>
+    </section>
+
   </div>
   <footer class="footer">footer</footer>
 </div>
