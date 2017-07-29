@@ -5,3 +5,7 @@ import menu from "./menu";
 menu();
 objectFit();
 links();
+
+if ($(window).width() < 680) {
+  $('.features__items').slick();
+}

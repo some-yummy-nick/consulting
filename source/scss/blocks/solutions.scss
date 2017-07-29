@@ -1,0 +1,163 @@
+.solutions {
+  &__items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 40px;
+
+  }
+  &__item {
+    width: 132px;
+    height: 132px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+    img {
+      width: 90px;
+      height: 45px;
+    }
+    &:nth-child(odd) {
+      background-image: linear-gradient(207deg, #f2f2f0 0%, #e4e5e9 100%);
+    }
+    &:nth-child(even) {
+      background-image: linear-gradient(207deg, #f2f4f5 0%, #e8eff5 100%);
+    }
+  }
+  &__link {
+    position: relative;
+    width: 132px;
+    height: 132px;
+    padding-top: 90px;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 28px;
+    text-transform: uppercase;
+    border: 3px solid $accent-color;
+    text-align: center;
+    &::after {
+      content: "";
+      position: absolute;
+      top: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: block;
+      width: 53px;
+      height: 54px;
+      border: 2px solid $accent-color;
+      border-radius: 100%;
+    }
+    &:before {
+      position: absolute;
+      top: 31px;
+      left: 51%;
+      transform: translateX(-50%);
+      @include fa($fa-angle-right, $accent-color, 55px);
+    }
+  }
+  @media($tablet-widths) {
+    &__item {
+      width: 165px;
+      height: 165px;
+      img {
+        width: 106px;
+        height: 47px;
+      }
+      &--microsoft {
+        img {
+          height: 53px;
+        }
+      }
+      &--moodle {
+        img {
+          width: 144px;
+          height: 37px;
+        }
+      }
+      &--staff {
+        img {
+          width: 124px;
+          height: 59px;
+        }
+      }
+      &--qlik {
+        img {
+          width: 140px;
+          height: 43px;
+        }
+      }
+      &--bitrix {
+        img {
+          width: 84px;
+          height: 94px;
+        }
+      }
+    }
+    &__link {
+      width: 165px;
+      height: 165px;
+      padding-top: 115px;
+    }
+  }
+  @media($desktop-widths) {
+    &__item {
+      width: 262px;
+      height: 262px;
+      img {
+        width: 169px;
+        height: 75px;
+      }
+      &--microsoft {
+        img {
+          width: 217px;
+          height: 110px;
+        }
+      }
+      &--moodle {
+        img {
+          width: 230px;
+          height: 59px;
+        }
+      }
+      &--staff {
+        img {
+          width: 197px;
+          height: 94px;
+        }
+      }
+      &--tutor {
+        img {
+          width: auto;
+          height: auto;
+        }
+      }
+      &--qlik {
+        img {
+          width: 223px;
+          height: 69px;
+        }
+      }
+      &--bitrix {
+        img {
+          width: 134px;
+          height: 149px;
+        }
+      }
+    }
+    &__link {
+      width: 262px;
+      height: 262px;
+      padding-top: 175px;
+      font-size: 16px;
+      &::after {
+        width: 85px;
+        height: 85px;
+        top: 85px;
+      }
+      &::before {
+        top: 92px;
+        @include fa($fa-angle-right, $accent-color, 75px);
+      }
+    }
+  }
+}

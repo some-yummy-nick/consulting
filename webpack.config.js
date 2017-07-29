@@ -88,6 +88,7 @@ const common = {
     new PurifyCSSPlugin({
       paths: glob.sync([
         path.join(__dirname, './source/js/*.js'),
+        path.join(__dirname, './source/libraries/*.*'),
         path.join(__dirname, './source/html/index.html')
       ]),
       minimize:env === 'production'
