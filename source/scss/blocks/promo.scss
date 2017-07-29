@@ -48,29 +48,28 @@
       background-color: $accent-color;
       text-decoration: none;
     }
-    &--last{
+    &--last {
       margin-right: 0;
     }
-
   }
-  &__click{
+  &__click {
     display: none;
   }
-@media(min-width: 338px) {
-  padding-top: 200px;
-}
+  @media(min-width: 338px) {
+    padding-top: 200px;
+  }
   @media(min-width: 408px) {
     padding-top: 200px;
-    &__title{
+    &__title {
       font-size: 46px;
     }
   }
   @media($tablet-widths) {
     padding-top: 225px;
-     &__title{
-       font-size: 57px;
-     }
-    &__btn{
+    &__title {
+      font-size: 57px;
+    }
+    &__btn {
       margin-bottom: 0;
     }
     &__click {

@@ -1,10 +1,15 @@
-.consultation{
-  padding-top: 45px;
-  padding-bottom: 45px;
+.consultation {
+  margin-bottom: 20px;
+  padding-top: 25px;
+  padding-bottom: 25px;
   background-image: url('../images/consultation-bg.jpg');
   background-position: center;
-  background-repeat: no-repeat;
-  &__title{
+  &--bottom {
+    margin-bottom: 0;
+    background-image: url('../images/consultation-bg-2.jpg');
+    background-position: center;
+  }
+  &__title {
     color: #fff;
     font-size: 23px;
     font-weight: 700;
@@ -12,7 +17,7 @@
     text-transform: uppercase;
     text-align: center;
   }
-  &__text{
+  &__text {
     margin-bottom: 30px;
     color: #fff;
     text-align: center;
@@ -20,20 +25,20 @@
     font-weight: 300;
     line-height: 30px;
   }
-  &__form{
+  &__form {
     text-align: center;
   }
-  &__field{
+  &__field {
     width: 300px;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 20px;
-    &--name{
+    &--name {
       display: none;
     }
-    &--phone{
+    &--phone {
       position: relative;
-      label{
+      label {
         position: absolute;
         top: 0;
         left: 30px;
@@ -43,7 +48,7 @@
         line-height: 70px;
       }
     }
-    input{
+    input {
       width: 300px;
       height: 60px;
       padding-left: 20px;
@@ -53,13 +58,13 @@
       font-size: 20px;
       font-weight: 300;
       line-height: 70px;
-      @include placeColor($color:transparent);
-      &:focus + label{
-          display: none;
+      @include placeColor($color: transparent);
+      &:focus + label {
+        display: none;
       }
     }
   }
-  &__submit{
+  &__submit {
     width: 300px;
     height: 60px;
     background-color: transparent;
@@ -68,19 +73,22 @@
     border-radius: 5px;
     font-weight: 700;
     text-transform: uppercase;
+    &--bottom {
+      border-color: $accent-color;
+    }
   }
   @media($tablet-widths) {
-     &__field{
-       @include inlineBlock();
-       margin-right: 10px;
-       label{
-         display: none;
-       }
-       input{
-         @include placeColor($color:#888);
-       }
-     }
-    &__submit{
+    &__field {
+      @include inlineBlock();
+      margin-right: 10px;
+      label {
+        display: none;
+      }
+      input {
+        @include placeColor($color: #888);
+      }
+    }
+    &__submit {
       display: block;
       width: 613px;
       margin-left: auto;

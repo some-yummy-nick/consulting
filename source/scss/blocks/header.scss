@@ -3,7 +3,7 @@
   padding-top: 30px;
   padding-bottom: 30px;
   color: #222;
-  &__logo{
+  &__logo {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -37,7 +37,7 @@
       background-color: gray;
 
     }
-    &::after,&::before {
+    &::after, &::before {
       content: "";
       position: absolute;
       display: block;
@@ -46,10 +46,10 @@
       height: 2px;
       background-color: gray;
     }
-    &::after{
+    &::after {
       top: 0;
     }
-    &::before{
+    &::before {
       bottom: 0;
     }
   }
@@ -63,7 +63,6 @@
     span {
       display: block;
       font-size: 14px;
-
     }
     &::after {
       position: absolute;
@@ -108,13 +107,13 @@
   &__contact {
     display: none;
   }
-  &__contact-icon{
+  &__contact-icon {
     position: absolute;
     left: 20px;
     @include fa($fa-phone, $accent-color, 25px);
     cursor: pointer;
   }
-  &__popup{
+  &__popup {
     position: absolute;
     right: 0;
     top: 0;
@@ -125,28 +124,28 @@
     box-shadow: 0 2px 5px rgba(0, 0, 2, 0.32);
     background-color: #303030;
     color: #fff;
-    h2{
+    h2 {
       position: relative;
       text-align: center;
-       &::after{
-             content: "";
-             position: absolute;
-             display: block;
-         bottom: -10px;
+      &::after {
+        content: "";
+        position: absolute;
+        display: block;
+        bottom: -10px;
 
-         width: 100%;
-         height: 2px;
-         background-color: $accent-color;
-           }
+        width: 100%;
+        height: 2px;
+        background-color: $accent-color;
+      }
     }
   }
-  &__form{
+  &__form {
     margin-top: 40px;
-    input{
+    input {
       width: 100%;
       padding: 10px;
     }
-    button[type="submit"]{
+    button[type="submit"] {
       background-color: $accent-color;
       border: none;
       padding: 15px;
@@ -157,7 +156,7 @@
       width: 100%;
     }
   }
-  &__form-block{
+  &__form-block {
     @include marginBottom();
   }
   @media($tablet-widths) {
@@ -166,7 +165,7 @@
       justify-content: space-between;
       flex-wrap: wrap;
     }
-    &__logo{
+    &__logo {
       position: static;
       transform: translateX(0);
     }
@@ -184,8 +183,7 @@
       margin-top: 25px;
       box-shadow: none;
     }
-
-    &__menu-phone,&__menu-icon {
+    &__menu-phone, &__menu-icon {
       display: none;
     }
     &__list {
@@ -194,7 +192,7 @@
       justify-content: space-between;
     }
     &__item {
-      position:static;
+      position: static;
       padding: 0;
       padding-left: 0;
       margin-right: 20px;
@@ -219,8 +217,8 @@
         }
       }
     }
-    &__link{
-      color:#333;
+    &__link {
+      color: #333;
     }
     &__contact {
       display: block;
@@ -234,7 +232,7 @@
         text-align: center;
       }
     }
-    &__contact-icon{
+    &__contact-icon {
       display: none;
     }
   }

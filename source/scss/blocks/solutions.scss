@@ -1,10 +1,10 @@
 .solutions {
+  margin-bottom: 40px;
   &__items {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
     margin-top: 40px;
-
   }
   &__item {
     width: 132px;
@@ -12,10 +12,31 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
+    margin-right: 20px;
     img {
       width: 90px;
       height: 45px;
+    }
+    &--moodle {
+      img {
+        width: 106px;
+        height: 27px;
+      }
+    }
+    &--tutor {
+      img {
+        width: 75px;
+        height: 61px;
+      }
+    }
+    &--qlik img {
+      width: 89px;
+      height: 27px;
+    }
+    &--bitrix img {
+      width: 72px;
+      height: 81px;
     }
     &:nth-child(odd) {
       background-image: linear-gradient(207deg, #f2f2f0 0%, #e4e5e9 100%);
@@ -56,6 +77,9 @@
     }
   }
   @media($tablet-widths) {
+    &__items {
+      justify-content: space-between;
+    }
     &__item {
       width: 165px;
       height: 165px;

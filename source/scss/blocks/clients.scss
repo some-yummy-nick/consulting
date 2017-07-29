@@ -1,0 +1,59 @@
+.clients {
+  &__items {
+    width: 220px;
+    max-width: 1155px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px;
+  }
+  &__item {
+    width: 220px !important;
+    img {
+      filter: grayscale(100%);
+    }
+    &:hover {
+      img {
+        filter: grayscale(0);
+      }
+    }
+  }
+  .slick-arrow {
+    position: absolute;
+    z-index: 5;
+    top: 50px;
+    font-size: 0;
+    width: 31px;
+    height: 31px;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+  }
+  .slick-prev {
+    left: -40px;
+    &::after {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translateX(-50%) translateY(-50%);
+      @include fa($fa-angle-left, #7f7f7f, 50px);
+    }
+  }
+  .slick-next {
+    right: -40px;
+    &::after {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translateX(-50%) translateY(-50%);
+      @include fa($fa-angle-right, #7f7f7f, 50px);
+    }
+  }
+  @media($tablet-widths) {
+    &__items {
+      width: auto;
+    }
+    &__item {
+      width: 250px !important;
+    }
+  }
+}

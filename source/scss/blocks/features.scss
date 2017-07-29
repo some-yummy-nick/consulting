@@ -51,13 +51,12 @@
       width: 95px;
       height: 109px;
     }
-    &--managing{
-      svg{
+    &--managing {
+      svg {
         width: 136px;
         height: 105px;
       }
     }
-
   }
   &__number {
     position: absolute;
@@ -80,17 +79,16 @@
       top: 0;
       left: 0;
     }
-    &__items{
+    &__items {
       width: auto;
       margin-top: 60px;
     }
-
     &__item {
       margin-bottom: 40px;
       padding-left: 220px;
       text-align: left;
     }
-    &__number{
+    &__number {
       font-size: 44px;
     }
   }
@@ -123,10 +121,39 @@
         }
       }
     }
-    &__number{
+    &__number {
       font-size: 60px;
     }
-
+  }
+  .slick-arrow {
+    position: absolute;
+    top: 50px;
+    font-size: 0;
+    width: 31px;
+    height: 31px;
+    border: none;
+    background-color: #ccc;
+    cursor: pointer;
+  }
+  .slick-prev {
+    left: 0;
+    &::after {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translateX(-50%) translateY(-50%);
+      @include fa($fa-angle-left, #fff, 30px);
+    }
+  }
+  .slick-next {
+    right: 0;
+    &::after {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translateX(-50%) translateY(-50%);
+      @include fa($fa-angle-right, #fff, 30px);
+    }
   }
 }
 
@@ -134,34 +161,4 @@
   fill: #fff !important;
   fill-rule: evenodd;
 }
-.slick-arrow{
-  position: absolute;
-  top: 50px;
-  font-size: 0;
-  width: 31px;
-  height: 31px;
-  border: none;
-  background-color: #ccc;
-  cursor: pointer;
 
-}
-.slick-prev{
-  left: 0;
-  &::after{
-    position: absolute;
-    left: 50%;
-      top: 50%;
-      transform: translateX(-50%) translateY(-50%);
-    @include fa($fa-angle-left, #fff ,30px);
-  }
-}
-.slick-next{
-  right: 0;
-  &::after{
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translateX(-50%) translateY(-50%);
-    @include fa($fa-angle-right, #fff ,30px);
-  }
-}

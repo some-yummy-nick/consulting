@@ -290,9 +290,82 @@
         </div>
       </div>
     </section>
+    <section class="clients">
+      <div class="container">
+        <h2 class="section__title">Наши клиенты</h2>
+        <p class="section__text">Компании которые доверили нам свой бизнесс</p>
+        <div class="clients__items">
+          <div class="clients__item">
+            <img src="<%= require('../images/clients-1.jpg') %>" alt="clients"/>
+          </div>
+          <div class="clients__item">
+            <img src="<%= require('../images/clients-2.jpg') %>" alt="clients"/>
+          </div>
+          <div class="clients__item">
+            <img src="<%= require('../images/clients-3.jpg') %>" alt="clients"/>
+          </div>
+          <div class="clients__item">
+            <img src="<%= require('../images/clients-4.jpg') %>" alt="clients"/>
+          </div>
+          <div class="clients__item">
+            <img src="<%= require('../images/clients-1.jpg') %>" alt="clients"/>
+          </div>
+          <div class="clients__item">
+            <img src="<%= require('../images/clients-2.jpg') %>" alt="clients"/>
+          </div>
+          <div class="clients__item">
+            <img src="<%= require('../images/clients-3.jpg') %>" alt="clients"/>
+          </div>
+          <div class="clients__item">
+            <img src="<%= require('../images/clients-4.jpg') %>" alt="clients"/>
+          </div>
+          <div class="clients__item">
+            <img src="<%= require('../images/clients-1.jpg') %>" alt="clients"/>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="about">
+      <div class="about__left">
+        <h2 class="about__title">О компании</h2>
+        <p class="about__text">С нами трудные задачи становятся простыми!</p>
+        <p>Компания «Технологии обучения» была основана в 2011 году и изначально специализировалась на оказании IT-консалтинговых услуг в сфере автоматизации систем мотивации персонала и дистанционного обучения на платформе WebTutor, а также вторым.</p>
+      </div>
+      <div class="about__right"></div>
+    </section>
+    <section class="consultation  consultation--bottom">
+      <div class="container">
+        <div class="consultation__title">Бесплатная консультация</div>
+        <div class="consultation__text">Наши специалисты с радостью ответят на все ваши вопросы!</div>
+        <form class="consultation__form">
+          <div class="consultation__field  consultation__field--name">
+            <input type="text" placeholder="Ваше имя">
+          </div>
+          <div class="consultation__field  consultation__field--phone">
+
+            <input type="text" placeholder="Номер телефона" id="consultation-phone">
+            <label for="consultation-phone">Введите ваш контактный телефон</label>
+          </div>
+          <button class="consultation__submit  consultation__submit--bottom" type="submit">Заказать консультацию</button>
+        </form>
+      </div>
+    </section>
+    <div class="maps">
+      <div class="maps__block">
+        <p>г. Москва,<br>
+          Петровско-Разумовский пр., д. 29</p>
+        <div class="maps__phone"></div>
+         <a class="maps__contact-phone" href="tel:+74959680611">Тел.:+7 (495) 968-0611</a>
+          <a href="mailto:info@texob.ru" >info@texob.ru</a>
+      </div>
+      <div id="map" class="map" style="height: 616px"></div>
+    </div>
+
   </div>
-  <footer class="footer">footer</footer>
+  <footer class="footer">© «Технологии обучения», 2012—2017  •  Все права защищены. Копирование с сайта запрещено</footer>
 </div>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB6pCbI26YldOC6yGHXvG61m66pAI6wS2U"></script>
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 <script src="libraries/slick.min.js"></script>
 <script>window.jQuery || document.write('<script src="js/jquery.js"><\/script>')</script>
