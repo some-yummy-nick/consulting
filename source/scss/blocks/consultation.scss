@@ -1,7 +1,7 @@
 .consultation {
   margin-bottom: 20px;
   padding-top: 25px;
-  padding-bottom: 25px;
+  padding-bottom: 40px;
   background-image: url('../images/consultation-bg.jpg');
   background-position: center;
   &--bottom {
@@ -83,6 +83,7 @@
     }
   }
   @media($tablet-widths) {
+    padding-bottom: 25px;
     &__field {
       @include inlineBlock();
       margin-right: 10px;

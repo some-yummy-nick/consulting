@@ -3,7 +3,7 @@
   &__items {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-around;
     margin-top: 40px;
   }
   &__item {
@@ -14,7 +14,6 @@
     align-items: center;
     justify-content: center;
     margin-bottom: 20px;
-    margin-right: 20px;
     img {
       width: 90px;
       height: 45px;
@@ -46,7 +45,7 @@
       background-image: linear-gradient(207deg, #f2f4f5 0%, #e8eff5 100%);
     }
     &:hover {
-      .solutions__hover{
+      .solutions__hover {
         opacity: 1;
         transition: opacity linear 0.1s;
       }
@@ -83,7 +82,7 @@
       @include fa($fa-angle-right, $accent-color, 55px);
     }
   }
-  &__hover{
+  &__hover {
     position: absolute;
     display: flex;
     justify-content: center;
@@ -96,7 +95,7 @@
     opacity: 0;
     transition: opacity linear 0.1s;
   }
-  &__hided{
+  &__hided {
     display: block;
     width: 154px;
     height: 60px;
@@ -160,6 +159,7 @@
     &__item {
       width: 262px;
       height: 262px;
+      margin-bottom: 30px;
       img {
         width: 169px;
         height: 75px;

@@ -80,7 +80,8 @@
   }
   @media($tablet-widths) {
     &__block {
-      width: 320px;
+      width: 294px;
+      height: 404px;
       left: auto;
       right: 20px;
       transform: translateX(0);
@@ -89,6 +90,16 @@
       &::before {
         width: 47px;
         height: 46px;
+        top: 50px;
+      }
+    }
+  }
+  @media($desktop-widths) {
+    &__block {
+      width: 360px;
+      padding-top: 130px;
+      &::before {
+        top: 70px;
       }
     }
   }
