@@ -96,7 +96,7 @@
     border-bottom: 2px solid transparent;
     text-decoration: none;
     font-weight: 700;
-    font-size: 13px;
+    font-size: 14px;
     text-transform: uppercase;
     color: #bdbdbd;
     &:hover {
@@ -144,6 +144,7 @@
     input {
       width: 100%;
       padding: 10px;
+      font-size: 15px;
     }
     button[type="submit"] {
       background-color: $accent-color;
@@ -192,7 +193,7 @@
       justify-content: space-between;
     }
     &__item {
-      position: static;
+      position: relative;
       padding: 0;
       padding-left: 0;
       margin-right: 20px;
@@ -214,26 +215,144 @@
           top: 50%;
           transform: translateY(-50%);
           @include fa($fa-angle-down, $accent-color, 18px);
+          cursor: pointer;
+
+        }
+        &:focus {
+          color: #0000aa;
         }
       }
     }
-    &__link {
+    &__submenu {
+      position: absolute;
+      top: 40px;
+      z-index: 5;
+      width: 267px;
+      padding: 30px 40px;
+      background-color: #fff;
+      box-shadow: 1.5px 2.6px 15px rgba(0, 0, 0, 0.3);
+      list-style-type: none;
       color: #333;
+      &::after {
+        content: "";
+        position: absolute;
+        display: block;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: $accent-color;
+      }
+      li {
+        @include marginBottom(30px);
+      }
+    }
+    &__link {
+      color: #222;
     }
     &__contact {
+      display: flex;
+    }
+    &__btn {
       display: block;
-      a {
-        display: block;
-        margin-bottom: 10px;
-        color: #333;
-        font-weight: 300;
-        line-height: 17px;
-        letter-spacing: 4px;
-        text-align: center;
-      }
+      width: 146px;
+      height: 32px;
+      margin-bottom: 10px;
+      border: 2px solid #6db436;
+      border-radius: 4px;
+      line-height: 32px;
+      color: #333;
+      font-size: 12px;
+      font-weight: 300;
+      text-align: center;
+      text-transform: uppercase;
+    }
+    &__phone {
+      display: block;
+      letter-spacing: 1px;
+      margin-right: 30px;
+      line-height: 32px;
     }
     &__contact-icon {
       display: none;
+    }
+    &__popup {
+      z-index: 10;
+      width: 442px;
+      height: 396px;
+      top: 105px;
+      left: 50%;
+      transform: translateX(-50%);
+      padding-left: 65px;
+      padding-right: 65px;
+      background-color: transparent;
+      border: 1px solid white;
+      h2 {
+        &::after{
+          height: 1px;
+        }
+        span {
+          display: none;
+        }
+      }
+    }
+    &__popup-close{
+      position: absolute;
+      width: 11px;
+      height: 11px;
+      top: 20px;
+      right: 20px;
+      background-image: url('../images/close.png');
+      cursor: pointer;
+    }
+    &__form{
+      button{
+        font-size: 16px;
+      }
+    }
+    &__success{
+      position: absolute;
+      z-index: 10;
+      width: 442px;
+      height: 396px;
+      top: 105px;
+      left: 50%;
+      transform: translateX(-50%);
+      padding-top: 85px;
+      padding-left: 65px;
+      padding-right: 65px;
+      color: #fff;
+      text-align: center;
+      h3{
+        font-size: 17px;
+        font-weight: 700;
+        line-height: 21px;
+      }
+      p{
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 24px;
+      }
+       &::after{
+             content: "";
+             position: absolute;
+             display: block;
+         width: 66px;
+         height: 66px;
+         background-image: url('../images/header-success.png');
+         top: 0;
+         left: 50%;
+         transform: translateX(-50%);
+           }
+    }
+    &__success-close{
+      position: absolute;
+      width: 11px;
+      height: 11px;
+      top: 5px;
+      right: 20px;
+      background-image: url('../images/close.png');
+      cursor: pointer;
     }
   }
   @media($desktop-widths) {
@@ -243,12 +362,11 @@
     &__menu {
       order: 0;
     }
-    &__item {
-
+    &__phone {
+      margin-right: 0;
     }
-    &__link {
-      font-size: 16px;
-      color: #222;;
+    &__contact {
+      display: block;
     }
   }
 }

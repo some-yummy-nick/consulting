@@ -27,6 +27,7 @@ body {
   font-weight: 400;
   line-height: 1.42;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 .fonts-loaded {
@@ -61,6 +62,7 @@ svg {
 }
 
 .wrapper {
+  position: relative;
   display: table;
   height: 100%;
   width: 100%;
@@ -70,7 +72,15 @@ svg {
   display: table-row;
   height: 100%;
 }
-
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  z-index: 9;
+  background: rgba(0, 0, 0, 0.97);
+}
 .noscript {
   display: block;
   text-align: center;
@@ -88,14 +98,6 @@ svg {
   @include container;
 }
 
-.btn {
-  display: block;
-  font-size: 12px;
-  padding: 10px 15px;
-  border: 2px solid #6db436;
-  border-radius: 4px;
-  text-transform: uppercase;
-}
 
 .section__title {
   text-align: center;
